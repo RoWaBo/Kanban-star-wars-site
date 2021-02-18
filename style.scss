@@ -1,0 +1,82 @@
+// ====  BOILER PLATE ====
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    line-height: 1.5;  
+}
+
+html{
+    font-size: 1em;
+}
+
+img{
+    width:100%;
+    height:auto;
+    display:block;
+    
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url("image/lightSwords.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;  
+  }
+
+ul{
+    list-style: none;  
+}
+// ====  BOILER PLATE END ====
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh; 
+}
+
+.character-collection{
+    padding: 3rem 0;
+
+    &__heading{
+        text-transform: uppercase;
+        color: rgb(236, 233, 48);
+        text-align: center;
+        padding-bottom: 2rem;
+        font-size: 40px;
+    }
+}
+
+.collection-container{
+    display: grid;
+    column-gap: 5%;
+    row-gap: 2rem;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+    padding: 0 10%;
+}
+
+.collection-box{
+    border: solid 2px white;
+    justify-self: center;
+    width: 100%;
+    height: 200px;
+
+    &__link{
+        width:100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.5;
+}
+
+html {
+  font-size: 1em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url("image/lightSwords.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+}
+
+.character-collection {
+  padding: 3rem 0;
+}
+
+.character-collection__heading {
+  text-transform: uppercase;
+  color: #ece930;
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 40px;
+}
+
+.collection-container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
+  row-gap: 2rem;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 0 10%;
+}
+
+.collection-box {
+  border: solid 2px white;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  width: 100%;
+  height: 200px;
+}
+
+.collection-box__link {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+}
+/*# sourceMappingURL=style.css.map */
