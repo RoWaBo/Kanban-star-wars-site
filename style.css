@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,7 @@
 
 html {
   font-size: 1em;
+  font-family: 'Nunito', sans-serif;
 }
 
 img {
@@ -19,6 +21,7 @@ img {
 .wrapper {
   width: 100%;
   height: 100vh;
+  overflow: scroll;
   margin: 0 auto;
   background-size: cover;
   background-position: center;
@@ -45,17 +48,18 @@ ul {
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100vh;
+  overflow: scroll;
 }
 
 .character-collection {
-  padding: 3rem 0;
+  padding: 12vh 0;
 }
 
 .character-collection__heading {
   text-transform: uppercase;
   color: #ece930;
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
   font-size: 40px;
 }
 
@@ -67,7 +71,7 @@ ul {
   row-gap: 2rem;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 0 10%;
+  padding: 0 12vw;
 }
 
 .collection-box {
@@ -94,19 +98,20 @@ ul {
 }
 
 .character {
-  padding: 3rem 0;
+  padding: 12vh 0;
   text-align: center;
   color: white;
 }
 
 .character__name {
-  font-size: 35px;
+  font-size: 40px;
   padding-bottom: 2rem;
 }
 
 .character__data-table {
   margin: 4rem auto;
   width: 300px;
+  font-size: 20px;
 }
 
 .character__data-row {
@@ -120,6 +125,10 @@ ul {
           align-items: center;
   border: solid 2px white;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.character__data-name {
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */
