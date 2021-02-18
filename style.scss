@@ -88,3 +88,29 @@ ul{
         font-size: 24px;
     }
 }
+
+.character{
+    padding: 3rem 0;
+    text-align: center;
+    color: white;
+
+    &__name{
+        font-size: 35px;
+        padding-bottom: 2rem;
+    }
+
+    &__data-table{
+        margin: 4rem auto;
+        width: 300px;
+    }
+
+    &__data-row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        border: solid 2px white;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+}
