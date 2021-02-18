@@ -32,7 +32,9 @@ function addLinkNameToURL(){
         // Changeing the page url ('property name', value)
         urlHref.searchParams.set('characterName', linkName); 
         // replacing page url without reloade (state, new title displayed in browser, the replacement url)
-        window.history.replaceState( nextState, nextTitle, urlHref);    
+        window.history.replaceState( nextState, nextTitle, urlHref);
+        console.log(Id);    
     }     
 };
 // =============================
+

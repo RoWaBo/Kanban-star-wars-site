@@ -23,9 +23,17 @@ img{
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    background-image: url("image/lightSwords.jpg");
+
     background-size: cover;
     background-position: center;
+
+    &_sword-background{
+        background-image: url("image/lightSwords.jpg");   
+    }
+
+    &_geometric-background{
+        background-image: url("image/cool-geometric-triangular-figure-neon-laser-light-great-background.jpg"); 
+    }
 
 }
 
