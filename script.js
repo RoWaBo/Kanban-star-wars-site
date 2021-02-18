@@ -33,8 +33,30 @@ function addLinkNameToURL(){
         urlHref.searchParams.set('characterName', linkName); 
         // replacing page url without reloade (state, new title displayed in browser, the replacement url)
         window.history.replaceState( nextState, nextTitle, urlHref);
-        console.log(Id);    
+
+        fetchCharacterData(linkName);  
     }     
 };
 // =============================
 
+
+async function fetchCharacterData(linkName){
+    const response = await fetch('https://swapi.dev/api/people/?search=' + linkName);
+    const result = await response.json();
+    const characterData = result.results[0];
+    
+    console.log(characterData);
+    console.log(characterData.films.length);
+
+    addCharacterDataToHTML(characterData);
+}
+
+function addCharacterDataToHTML(characterData){
+
+    const nameLocation = document.querySelector('.character__name');
+    const subheadingLocation = document.querySelector('.character__subheading');
+    const dataTableLocation = document.querySelector('.character__data-table');
+
+    nameLocation.innerHTML = characterData.name; 
+    subheadingLocation.innerHTML = "Medvirker i " + characterData.films.length + " film"; 
+} 
