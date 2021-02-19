@@ -12,7 +12,7 @@ for (let index = 0; index < links.length; index++) {
     });
 };
 
-// ==== ADD LINK NAME TO URL ====
+// ==== ADD LINK NAME TO URL ==== //OBS jeg endte med ikke at aflæse URL'en og brugte bare linkName istedet! 
 addLinkNameToURL();
 function addLinkNameToURL() {
     // preventing the function from running when not on intended page
@@ -37,7 +37,7 @@ async function fetchCharacterData(linkName) {
     const response = await fetch('https://swapi.dev/api/people/?search=' + linkName);
     const result = await response.json();
     const characterData = result.results[0];
-
+    console.log(characterData);
     addCharacterDataToHTML(characterData);
 }
 // ============================================
@@ -53,9 +53,10 @@ function addCharacterDataToHTML(characterData) {
     // updating HTML tags with text
     nameLocation.innerHTML = characterData.name;
     subheadingLocation.innerHTML = "Participates in " + characterData.films.length + " films";
+
     // loop which add data to table and creates as amny rows as specified by the index number
     for (let index = 1; index < 8; index++) {
-        
+
         const [property, value] = characterDataArray[index];//Array deconstructing: selecting an array item and extracting the two values
         //Converting the value to a text node otherwise appendChild() doesn't work  
         const propertyNode = document.createTextNode(property);
